@@ -1,7 +1,7 @@
 name: Github Action - 1
 on: push
 jobs:
-    lint:
+    test:
         runs-on: ubuntu-latest
         steps:
           - name: Get Code
@@ -9,6 +9,6 @@ jobs:
           - name: Install Dependencies  #keeping default node version
             run: npm ci
           - name: Run Lint
-            run: npm lint
+            run: npm test
 
     
